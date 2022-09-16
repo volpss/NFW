@@ -1,0 +1,166 @@
+/* Reset de CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Seta o estilo da lista para nenhum (Tira os pontos dos itens, padrao do navegador) */
+ul {
+    list-style: none;
+}
+
+/* Definicoes do Header */
+header {
+    padding: 32px;
+    height: 152px;
+}
+
+/* Definicoes do Header Div*/
+header div {
+    width: 120px;
+    margin: auto;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    border-radius: 50%;
+    display: flex;
+    padding: 4px;
+
+    transition: transform .3s;
+
+    animation: fromTop .7s .2s backwards;
+}
+
+/* Definicoes do Header Img */
+header div img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+header div:hover {
+    transform: scale(1.1);
+}
+
+/* Seta o padrao do Body */
+body * {
+    font-family: 'Inter', sans-serif;
+    line-height: 160%;
+}
+
+/* Definicoes do Body */
+body {
+    background-image: url(./assets/bg.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #121214;
+}
+
+/* Definicoes do Main */
+main {
+    max-width: 580px;
+    width: 90%;
+    margin: 32px auto;
+
+    display: grid;
+    gap: 24px;
+}
+
+/* Definicoes do Section */
+main section {
+    color: white;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+
+    animation: fromBottom .7s backwards;
+}
+
+/* Definicoes dos Sections filhas - Primeira filha */
+main section:nth-child(1) {
+    animation-delay: 0s;
+}
+
+/* Segunda filha */
+main section:nth-child(2) {
+    animation-delay: .3s ;
+}
+
+/* Terceira filha */
+main section:nth-child(3) {
+    animation-delay: .6s ;
+}
+
+/* Definicoes do Section -div */
+section div {
+    background-color: #2A2634;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+}
+
+/* Definicoes do Section -h2 */
+section h2 {
+    letter-spacing: -0.47px;
+}
+
+/* Definicoes do Section -p */
+section p {
+    letter-spacing: -0.18px;
+    color: #A1A1AA;
+}
+
+/* Definicoes do Section -ul */
+section ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 18px;
+}
+
+/* Definicao de transicoes dos items */
+section ul li {
+    transition: transform 0.3s;
+}
+
+section ul li:hover {
+    transform: scale(1.1);
+}
+
+/* Definicoes da Class: games-list */
+.games-list img {
+    border-radius: 8px;
+    width: 90px;
+}
+
+/* Definicoes da Class: channel-list */
+.channel-list img {
+    border-radius: 50%;
+    width: 70px;
+    border: 1px solid #443E54;
+}
+
+/* Animacoes */
+
+@keyframes fromTop {
+    from{
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fromBottom {
+    from{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
